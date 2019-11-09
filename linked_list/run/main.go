@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	testRemoveDupFromSortedList()
+	testSortLinkedList()
 }
 
 func testLinkedListCycle() {
@@ -98,4 +98,30 @@ func testReverseLinkedListII() {
 	node := linkedlist.ReverseLinkedListII(head, 2, 4)
 	linkedlist.PrintfLinkedListNotCycle(node)
 
+}
+
+func testInsertionSortedList() {
+	head := linkedlist.BuildLinkedList([]int{1, 2, 3, 5, 4})
+	linkedlist.PrintfLinkedListNotCycle(head)
+	node := linkedlist.InsertionSortedList(head)
+	linkedlist.PrintfLinkedListNotCycle(node)
+}
+
+func testInsertionSortedList_2() {
+	head := linkedlist.BuildLinkedList([]int{1, 2, 3, 5, 4, 4})
+	linkedlist.PrintfLinkedListNotCycle(head)
+	node := linkedlist.InsertionSortedList_2(head)
+	linkedlist.PrintfLinkedListNotCycle(node)
+}
+
+func testSortLinkedList() {
+	//head := linkedlist.BuildLinkedList([]int{1, 2, 3, 5, 4, 4})
+	//linkedlist.PrintfLinkedListNotCycle(head)
+	//node := linkedlist.SortList(head)
+	//linkedlist.PrintfLinkedListNotCycle(node)
+
+	head := linkedlist.BuildLinkedList([]int{4, 1, 2, 3})
+	linkedlist.PrintfLinkedListNotCycle(head)
+	node := linkedlist.SortList(head)
+	linkedlist.PrintfLinkedListNotCycle(node)
 }
