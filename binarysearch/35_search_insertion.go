@@ -1,13 +1,13 @@
 package binarysearch
 
-// SearchInsert: leetcode.35
+// SearchInsert : leetcode.35
 func SearchInsert(nums []int, target int) int {
 	length := len(nums)
 	low := 0
 	high := length - 1
 
 	for low <= high {
-		mid := low + (high - low) / 2
+		mid := low + (high-low)/2
 		if nums[mid] == target {
 			return mid
 		} else if nums[mid] < target {
