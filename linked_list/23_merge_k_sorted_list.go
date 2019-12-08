@@ -54,8 +54,8 @@ func mergeKSortedList(head1 *ListNode, head2 *ListNode) *ListNode {
 	return dummyHead.Next
 }
 
-// MergeKSortedList: leetcode.23
-func MergeKSortedList_2(lists []*ListNode) *ListNode {
+// MergeKSortedListII leetcode.23
+func MergeKSortedListII(lists []*ListNode) *ListNode {
 	if len(lists) == 0 {
 		return nil
 	}

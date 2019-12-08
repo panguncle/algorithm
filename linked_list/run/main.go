@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+
 	linkedlist "github.com/panguncle/algorithm/linked_list"
 )
 
 func main() {
-	testSortLinkedList()
+	//testSortLinkedList()
+	testListReverse()
 }
 
 func testLinkedListCycle() {
@@ -124,4 +126,10 @@ func testSortLinkedList() {
 	linkedlist.PrintfLinkedListNotCycle(head)
 	node := linkedlist.SortList(head)
 	linkedlist.PrintfLinkedListNotCycle(node)
+}
+
+func testListReverse() {
+	head := linkedlist.BuildLinkedList([]int{4, 1, 2, 3})
+	linkedlist.ReverseLinkedList(head)
+	linkedlist.PrintfLinkedListNotCycle(head)
 }

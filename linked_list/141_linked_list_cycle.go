@@ -1,11 +1,12 @@
 package linkedlist
 
+// ListNode 链表节点
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-// LinkedListHasCycle: leetcode.141
+// LinkedListHasCycle 141
 func LinkedListHasCycle(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false
