@@ -1,7 +1,13 @@
 package helper
 
+// InSliceEqual
 func IntSliceEqual(arr1, arr2 []int) bool {
-	if len(arr1) != len(arr2) {
+	lenA, lenB := len(arr1), len(arr2)
+	if lenA == 0 && lenB == 0 {
+		return true
+	}
+
+	if lenA != lenB {
 		return false
 	}
 
