@@ -27,12 +27,10 @@ func inorderBST(root *tree.TreeNode, ret *[]int, k int) {
  Reference 
  https://www.cnblogs.com/grandyang/p/4620012.html
 */
-
 func KthSmallestElemInBSTII(root *tree.TreeNode, k int) int {
 
 	var stack []*tree.TreeNode
 
-	var stack []*tree.TreeNode{}
     for k > 0 {
         for root != nil {
             stack = append(stack, root)

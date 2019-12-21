@@ -1,7 +1,10 @@
 package binarysearch
 
-// FindFirstNLastPosElemInSortedArray :
-// Todo
+/*
+FindFirstNLastPosElemInSortedArray :34
+lower_bound: 第一个 >= target的index
+uppder_bound 第一个 > target的index
+*/
 func FindFirstNLastPosElemInSortedArray(nums []int, target int) []int {
 	length := len(nums)
 	if length == 0 {

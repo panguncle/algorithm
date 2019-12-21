@@ -31,3 +31,28 @@ func maxInt(i, j int) int {
 	}
 	return j
 }
+
+// HourseRobberIII2 disscussion of sumbittion
+func HourseRobberIII2(root *TreeNode) int {
+	ifRobRoot, ifNotRobRoot := maxRob(root)
+	return max(ifRobRoot, ifNotRobRoot)
+}
+
+// DFS Post-Order:
+// maxRob returns the max value if node is (robbed, notRobbed)
+func maxRob(node *TreeNode) (int, int) {
+	// base case - nil node
+	if node == nil {
+		return 0, 0
+	}
+
+	// every other case
+	leftRob, leftNotRob := maxRob(node.Left)
+	rightRob, rightNotRob := maxRob(node.Right)
+
+	// if we rob node
+	ifRobNode := leftNotRob + rightNotRob + node.Val
+	// if we do not rob node
+	ifNotRobNode := maxInt(leftRob, leftNotRob) + maxInt(rightRob, rightNotRob)
+	return ifRobNode, ifNotRobNode
+}

@@ -2,12 +2,15 @@ package main
 
 import (
 	"fmt"
+	"strconv"
+	"time"
 
 	"github.com/panguncle/algorithm/dp"
 )
 
 func main() {
-	testUniquePaths()
+	// testUniquePaths()
+	fmt.Println(len(strconv.Itoa(time.UnixNano())))
 }
 
 func b(a map[int]bool) {
